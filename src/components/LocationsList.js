@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import LocationCard from './LocationCard';
+import styled from 'styled-components';
 
 export default function LocationsList() {
 
@@ -23,13 +24,18 @@ export default function LocationsList() {
   
       getCharacters();
     }, []);
+
+    const StyledCon = styled.section`
+    display: flex;
+    flex-wrap: wrap;
+    justify-self: center;`
   
     return (
-      <section className="location-list">
+      <StyledCon>
         {/* <h2>TODO: `array.map()` over your state here!</h2> */}
         {locations.map(location => (
           <LocationCard key={location.id} name={location.name} type={location.type} dimension={location.dimension} />
         ))}
-      </section>
+      </StyledCon>
     );
 }

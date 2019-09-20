@@ -1,13 +1,19 @@
 import React from "react";
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+
+const StyledNav = styled.div`
+  display: flex;
+  justify-content: space-around;
+  width: 70%;
+  justify-self: center;`
 
 export default function Header() {
   return (
     <header className="ui centered">
       <h1 className="ui center">Rick &amp; Morty Fan Page</h1>
 
-      <div>
-      <div className="App">
+      <StyledNav>
         <div>
           <Link to='/'>Home</Link>
         </div>
@@ -17,8 +23,7 @@ export default function Header() {
         <div>
           <Link to='/location'>Location</Link>
         </div>
-      </div>
-    </div>
+    </StyledNav>
     </header>
   );
 }
