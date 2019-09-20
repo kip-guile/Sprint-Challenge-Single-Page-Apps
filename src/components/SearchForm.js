@@ -1,10 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 
-export default function SearchForm() {
+export default function SearchForm(props) {
+  const {onChange, value} = props;
+
  
   return (
     <section className="search-form">
-     // Add a search form here
+     <input type="text" placeholder="Search.." value={value} onChange = {e => onChange(e.target.value)}/>
     </section>
   );
+
+
 }
