@@ -20,7 +20,7 @@ export default function CharacterCard(props) {
   return (
     <StyledCharacter>
       <StyledInnerCharacter>
-        <img src={image}/>
+        <img src={image} alt="character"/>
       </StyledInnerCharacter>
 
       <StyledInnerCharacter>
